@@ -28,7 +28,7 @@ public class StringsDemo1 {
         System.out.println();
 
         greeting = "Hello, World!";
-        String subsetString = greeting.substring(7, 11);
+        String subsetString = greeting.substring(7, 12);
         String location = greeting.substring(greeting.indexOf('W'), greeting.indexOf('!'));
         System.out.printf("subsetString: %s%n", subsetString);
         System.out.printf("location: %s%n", location);
@@ -39,6 +39,9 @@ public class StringsDemo1 {
         } else {
             System.out.printf("%s and %s are NOT the same string!%n", subsetString, location);
         }
+        if ("woRLD".equalsIgnoreCase(subsetString)) {
+            System.out.printf("woRLD and %s are essentially the same string (minus, case)%n", subsetString);
+        }
 
         // Checking if the literal strings have the same memory location
         if (greeting == "Hello, World!") {
@@ -46,5 +49,15 @@ public class StringsDemo1 {
         } else {
             System.out.printf("greeting and \"%s\" literal strings are NOT using the same memory location%n", greeting);
         }
+
+        // Checking Null
+        String state = null;
+        if (state == null) {
+            state = "North Carolina";
+            System.out.printf("%s is the State%n", state);
+        } else {
+            System.out.printf("%s is the State%n", state);
+        }
+
     }
 }
